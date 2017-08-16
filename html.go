@@ -295,7 +295,7 @@ func (options *Html) BlockQuote(out *bytes.Buffer, text []byte) {
 
 func (options *Html) Table(out *bytes.Buffer, header []byte, body []byte, columnData []int) {
 	doubleSpace(out)
-	out.WriteString("<table>\n<thead>\n")
+	out.WriteString("<table class=\"table table-bordered table-striped table-responsive\">\n<thead>\n")
 	out.Write(header)
 	out.WriteString("</thead>\n\n<tbody>\n")
 	out.Write(body)
